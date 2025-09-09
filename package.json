@@ -2,7 +2,7 @@
   "name": "whatsapp-vercel-bot",
   "version": "1.0.0",
   "description": "WhatsApp Bot for Vercel Deployment",
-  "main": "index.js",
+  "main": "pages/index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,11 +15,7 @@
     "react-dom": "^18.0.0",
     "whatsapp-web.js": "^1.25.0",
     "qrcode-terminal": "^0.12.0",
-    "qrcode": "^1.5.3",
-    "express": "^4.18.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "node-cron": "^3.0.2"
+    "qrcode": "^1.5.3"
   },
   "devDependencies": {
     "eslint": "^8.0.0",

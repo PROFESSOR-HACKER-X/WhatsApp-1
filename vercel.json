@@ -3,14 +3,7 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": ".next"
-      }
-    },
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
+      "use": "@vercel/next"
     }
   ],
   "routes": [
@@ -24,10 +17,10 @@
     }
   ],
   "functions": {
-    "api/bot.js": {
+    "pages/api/bot.js": {
       "maxDuration": 60
     },
-    "api/status.js": {
+    "pages/api/status.js": {
       "maxDuration": 30
     }
   }

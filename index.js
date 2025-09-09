@@ -52,10 +52,11 @@ export default function Home() {
       const data = await response.json();
       
       if (data.status === 'success') {
-        setConnectedNumbers(Object.entries(data.clients).map(([number, info]) => ({
+        const connectedNumbersList = Object.entries(data.clients).map(([number, info]) => ({
           number,
           status: info.status
-        })));
+        }));
+        setConnectedNumbers(connectedNumbersList);
         setStatus('Status checked successfully');
       }
     } catch (error) {
@@ -202,6 +203,7 @@ export default function Home() {
           border-radius: 4px;
           margin: 1rem 0;
           text-align: center;
+          overflow-x: auto;
         }
 
         .status-list {
@@ -220,10 +222,12 @@ export default function Home() {
 
         .connected {
           color: green;
+          font-weight: bold;
         }
 
         .disconnected {
           color: red;
+          font-weight: bold;
         }
 
         .status-message {
